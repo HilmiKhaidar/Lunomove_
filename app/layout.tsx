@@ -14,11 +14,32 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: '/favicon.svg', type: 'image/svg+xml' },
-      { url: '/icon-192x192.png', sizes: '192x192', type: 'image/png' },
-      { url: '/icon-512x512.png', sizes: '512x512', type: 'image/png' }
+      { url: '/icon-192x192.png', sizes: '192x192', type: 'image/png' }
     ],
     apple: '/icon-192x192.png',
     shortcut: '/favicon.svg'
+  },
+  openGraph: {
+    title: 'Lunomove - Kesadaran gerakan dalam setiap hari',
+    description: 'Daily movement awareness made simple. Aplikasi untuk membangun kesadaran terhadap aktivitas fisik dalam kehidupan sehari-hari.',
+    url: 'https://lunomove.vercel.app',
+    siteName: 'Lunomove',
+    images: [
+      {
+        url: '/icon-192x192.png',
+        width: 192,
+        height: 192,
+        alt: 'Lunomove Logo'
+      }
+    ],
+    locale: 'id_ID',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Lunomove - Kesadaran gerakan dalam setiap hari',
+    description: 'Daily movement awareness made simple. Aplikasi untuk membangun kesadaran terhadap aktivitas fisik dalam kehidupan sehari-hari.',
+    images: ['/icon-192x192.png'],
   }
 }
 
@@ -38,10 +59,12 @@ export default function RootLayout({
   return (
     <html lang="id">
       <head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon.svg" />
         <link rel="icon" type="image/png" sizes="192x192" href="/icon-192x192.png" />
-        <link rel="apple-touch-icon" sizes="192x192" href="/icon-192x192.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/icon-192x192.png" />
+        <link rel="mask-icon" href="/favicon.svg" color="#10B981" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="Lunomove" />
