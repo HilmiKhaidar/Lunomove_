@@ -63,7 +63,7 @@ export default function InsightsPage({ movements }: InsightsPageProps) {
     }
 
     // Calculate longest streak
-    const uniqueDates = [...new Set(movements.map(m => m.timestamp.toDateString()))]
+    const uniqueDates = Array.from(new Set(movements.map(m => m.timestamp.toDateString())))
       .sort((a, b) => new Date(b).getTime() - new Date(a).getTime())
 
     for (let i = 0; i < uniqueDates.length; i++) {
