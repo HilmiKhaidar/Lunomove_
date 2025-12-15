@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://lunomove.vercel.app'),
   title: 'Lunomove - Kesadaran gerakan dalam setiap hari',
   description: 'Daily movement awareness made simple. Aplikasi untuk membangun kesadaran terhadap aktivitas fisik dalam kehidupan sehari-hari.',
   applicationName: 'Lunomove',
@@ -12,12 +13,8 @@ export const metadata: Metadata = {
     title: 'Lunomove'
   },
   icons: {
-    icon: [
-      { url: '/favicon.svg', type: 'image/svg+xml' },
-      { url: '/icon-192x192.png', sizes: '192x192', type: 'image/png' }
-    ],
-    apple: '/icon-192x192.png',
-    shortcut: '/favicon.svg'
+    icon: '/favicon.svg',
+    apple: '/icon-192x192.png'
   },
   openGraph: {
     title: 'Lunomove - Kesadaran gerakan dalam setiap hari',
@@ -59,12 +56,9 @@ export default function RootLayout({
   return (
     <html lang="id">
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon.svg" />
-        <link rel="icon" type="image/png" sizes="192x192" href="/icon-192x192.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/icon-192x192.png" />
-        <link rel="mask-icon" href="/favicon.svg" color="#10B981" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/icon-192x192.png" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="Lunomove" />
